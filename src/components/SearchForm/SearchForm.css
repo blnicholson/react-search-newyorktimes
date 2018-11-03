@@ -1,0 +1,11 @@
+.search{
+    margin-top:120px;
+}
+.form-control{
+    color:grey;
+}
+.form-group{
+    font-family: 'IBM Plex Mono', monospace;
+    color:white;
+    font-weight: 900
+}

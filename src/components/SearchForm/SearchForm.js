@@ -1,9 +1,9 @@
 import React from "react";
-import "./SearchForm"
+import "./SearchForm.css";
 
  const SearchForm = props => (
     <div className = "container">
-        <form>
+        <form className = "search">
             <div className="form-group">
             <label for ="topics">Topic</label>
             <input type ="topic" className="form-control" name="topic" onChange={props.handleInputChange} />

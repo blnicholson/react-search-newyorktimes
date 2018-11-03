@@ -5,7 +5,7 @@ import "./Navbar.css";
 const NavBar = () =>(
     <nav className="navbar">
     <a className="navbar-brand" href="/">
-      <img src="/docs/4.1/assets/brand/bootstrap-solid.svg" width="30" height="30" alt=""></img>
+      <img id="nav" src="" width="30" height="30" alt=""></img>
       NYT Search
     </a>
     <form className="form-inline">

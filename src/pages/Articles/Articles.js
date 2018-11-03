@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import API from "../../utils/API";
 import SearchForm from "../../components/SearchForm/SearchForm";
+import "./Articles.css"
 
 class Articles extends Component {
     state = {
@@ -51,7 +52,7 @@ handleFormSubmit = event => {
 };
 render(){
     return(
-    <div>
+    <div className="background">
         <SearchForm 
           handleFormSubmit = {this.handleFormSubmit}
           handleInputChange = {this.handleInputChange}
