@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
+    "concurrently": "^4.0.1",
     "express": "^4.16.4",
     "mongoose": "^5.3.8",
     "react": "^16.6.0",
@@ -12,11 +13,12 @@
     "react-scripts": "2.1.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "concurrently \"node server.js\" \"react-scripts start\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "proxy:": "http://localhost:3001",
   "eslintConfig": {
     "extends": "react-app"
   },

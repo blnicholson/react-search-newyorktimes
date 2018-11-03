@@ -8,6 +8,8 @@ class Articles extends Component {
         topic: "",
         startDate: "",
         endDate: "",
+        url:"",
+        date:"",
         synopsis:"",
         articleResult: [],
         savedArticles: []
@@ -33,7 +35,9 @@ handleInputChange = event => {
 handleSaveArticle = event => {
     event.preventDefault();
     API.saveArticle({
-        
+        "title":this.state.topic,
+        "url":this.state.url,
+        "synposis":this.state.snippet
     })
         .then(res=> this.showBooks())
         .catch(err => console.log(err))
@@ -66,7 +70,7 @@ render(){
             <div className="card-body">
               <h5 className="card-title">{article.headline.main}</h5>
               <h6 className="card-subtitle mb-2 text-muted">{article.pub_date}</h6>
-              <p class="card-text">{article.snippet}</p>
+              <p className="card-text">{article.snippet}</p>
               <button className="btn"><a href={article.web_url} target="_blank">Read Article Here</a></button>
               <button id="saveButton" className="btn" onClick={this.handleSaveArticle}>Save</button>
             </div>

@@ -1,5 +1,7 @@
 const db = require("../models");
 
+
+//Interactions with the Database
 module.exports = {
     findAll: function(req,res){
         db.Article
@@ -20,8 +22,6 @@ module.exports = {
           .then(dbModel => res.json(dbModel))
           .catch(err => res.status(422).json(err));     
     },
-   
-
     deleteArticle: function(req, res){
         db.Article
           .findById({_id:req.params.id})

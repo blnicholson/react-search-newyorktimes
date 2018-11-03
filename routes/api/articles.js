@@ -4,12 +4,12 @@ const articleController = require("../../controllers/articleController");
 // Matches with "/api/books"
 router.route("/")
   .get(articleController.findAll)
-  .post(articleController.create);
+  .post(articleController.saveArticle);
 
-// Matches with "/api/books/:id"
+// Matches with "/api/savedArticle
 router
   .route("/:id")
-  .get(articleController.findById)
-  .delete(articleController.remove);
+  .get(articleController.findSaved)
+  .delete(articleController.deleteArticle);
 
 module.exports = router;
