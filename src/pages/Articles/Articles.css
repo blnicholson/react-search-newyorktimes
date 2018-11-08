@@ -1,8 +1,4 @@
-body{
-    background-image:url("newspaper.jpg");
-    background-repeat:no-repeat;
-    background-position:fixed;
-    background-size:cover;
-    background-position: center;
-   
+h1{
+    text-align: center;
+    color:whitesmoke;
 }

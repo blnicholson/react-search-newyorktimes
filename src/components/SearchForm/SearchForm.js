@@ -1,6 +1,8 @@
 import React from "react";
 import "./SearchForm.css";
 
+
+//Search form for searching articles
  const SearchForm = props => (
     <div className = "container">
         <form className = "search">

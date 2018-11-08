@@ -5,17 +5,16 @@ import "./Articles.css";
 
 
 class Articles extends Component {
+
+  //Setting the state
   state = {
     topic: "",
     startDate: "",
     endDate: "",
-    articleResult: [],
-    
+    articleResult: [], 
   };
 
-  
-  
-
+  //input change
   handleInputChange = event => {
     const { name, value } = event.target;
     this.setState({
@@ -46,9 +45,6 @@ class Articles extends Component {
     
   };
   
-
-  
-    
   render() {
     return (
       <div className="background">
@@ -57,6 +53,8 @@ class Articles extends Component {
           handleInputChange={this.handleInputChange}
         />
         <br />
+        <h1>Results</h1>
+        <br></br>
         <div className="container">
           <div className="row">
             <div className="col-md-12">
@@ -90,6 +88,7 @@ class Articles extends Component {
             </div>
           </div>
         </div>
+        
        
         
       </div>

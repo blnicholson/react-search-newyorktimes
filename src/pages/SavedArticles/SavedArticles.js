@@ -14,7 +14,7 @@ class SavedArticles extends Component {
     this.showArticles();
   }
 
-  // //Get saved articles
+  // //Get saved articles from the db
   showArticles = () => {
     API.getSaved()
       .then(res =>
@@ -29,6 +29,7 @@ class SavedArticles extends Component {
       .catch(err => console.log(err));
   };
 
+  //Delete button for deleting articles from the db
   handleDeleteArticle = article => {
     API.deleteArticle(article._id)
     .then(res => this.showArticles())
@@ -40,6 +41,9 @@ class SavedArticles extends Component {
       <div className="container">
       <div className="row">
         <div className="col-md-12">
+        <div className="result">
+          <h1 className="articlesResults">Saved Articles</h1>
+        </div>
           {this.state.savedArticles.map((save, i) => (
             <div key={i} className="card">
               <div className="card-body">
