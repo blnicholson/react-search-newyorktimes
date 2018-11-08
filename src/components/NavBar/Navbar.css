@@ -1,10 +1,11 @@
 .navbar{
     background-color:transparent;
-    margin-top:50px;
+    margin-top:25px;
 }
 .navbar-brand{
     color:whitesmoke;
     font-family: 'IBM Plex Mono', monospace;
     font-size:50px;
 }
+
 

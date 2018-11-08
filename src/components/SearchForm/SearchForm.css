@@ -1,11 +1,25 @@
 .search{
-    margin-top:120px;
+    margin-top:50px;
 }
 .form-control{
     color:grey;
+    width:450px;
+    margin-left:325px;
+    
 }
 .form-group{
     font-family: 'IBM Plex Mono', monospace;
     color:white;
     font-weight: 900
 }
+.card{
+    background:transparent;
+    border-color:white;
+    text-align: center;
+    font-family: 'IBM Plex Mono', monospace;
+    color:whitesmoke;
+
+    }
+    button{
+        color:whitesmoke;
+    }

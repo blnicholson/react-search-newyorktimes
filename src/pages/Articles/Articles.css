@@ -2,3 +2,16 @@ h1{
     text-align: center;
     color:whitesmoke;
 }
+#Button{
+    margin-left:35px;
+    color:whitesmoke;
+}
+button{
+    color:whitesmoke;
+}
+a{
+    color:whitesmoke;
+}
+.card{
+    margin-bottom: 50px;
+}

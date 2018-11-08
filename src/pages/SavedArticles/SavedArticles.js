@@ -44,8 +44,9 @@ class SavedArticles extends Component {
         <div className="result">
           <h1 className="articlesResults">Saved Articles</h1>
         </div>
+        <br/>
           {this.state.savedArticles.map((save, i) => (
-            <div key={i} className="card">
+            <div key={i} className="card" id="resultCard">
               <div className="card-body">
                 <h5 className="card-title">{save.title}</h5>
                 <h6 className="card-subtitle mb-2 text-muted">
@@ -53,7 +54,7 @@ class SavedArticles extends Component {
                 
                 </h6>
                 <p className="card-text">{save.synopsis}</p>
-                <button className="btn">
+                <button className="btn btn-outline-danger">
                   <a
                     href={save.URL}
                     target="_blank"
@@ -63,8 +64,8 @@ class SavedArticles extends Component {
                   </a>
                 </button>
                 <button
-                  id="deleteButton"
-                  className="btn"
+                  id="Button"
+                  className="btn btn-outline-danger"
                   onClick={()=> this.handleDeleteArticle(save)}
                 >
                   Delete

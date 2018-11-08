@@ -66,7 +66,7 @@ class Articles extends Component {
                       {article.pub_date}
                     </h6>
                     <p className="card-text">{article.snippet}</p>
-                    <button className="btn">
+                    <button className="btn btn-outline-warning">
                       <a
                         href={article.web_url}
                         target="_blank"
@@ -76,8 +76,8 @@ class Articles extends Component {
                       </a>
                     </button>
                     <button
-                      id="saveButton"
-                      className="btn"
+                      id="Button"
+                      className="btn btn-outline-warning"
                       onClick={()=>this.handleSaveArticle(article)}
                     >
                       Save

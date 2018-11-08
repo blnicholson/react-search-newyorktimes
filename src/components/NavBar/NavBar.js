@@ -9,7 +9,7 @@ const NavBar = () =>(
       NYT Search
     </a>
     <form className="form-inline">
-    <button className="btn"><a href="/savedArticles">Saved Articles</a></button>  
+    <button className="btn btn-outline-warning"><a href="/savedArticles">Saved Articles</a></button>  
  </form>
   </nav>
 );

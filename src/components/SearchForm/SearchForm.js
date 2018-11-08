@@ -5,6 +5,10 @@ import "./SearchForm.css";
 //Search form for searching articles
  const SearchForm = props => (
     <div className = "container">
+    <div className = "card">
+    <div className = "card-title">
+      <h1>Search Articles</h1>
+    </div>
         <form className = "search">
             <div className="form-group">
             <label>Topic</label>
@@ -20,8 +24,12 @@ import "./SearchForm.css";
             <label>End Date</label>
             <input type ="endDate" className="form-control" name="endDate" onChange={props.handleInputChange} />
             </div>
-            <button type="submit" className="btn btn-primary" onClick= {props.handleFormSubmit}>Submit</button>
+            <div className="card-footer">
+            <button type="submit" className="btn btn-outline-warning" onClick= {props.handleFormSubmit}>Submit</button>
+            </div>
         </form>
+    
+    </div>
     </div>
 );
 export default SearchForm;
