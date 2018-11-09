@@ -56,7 +56,7 @@ class SavedArticles extends Component {
                 <p className="card-text">{save.synopsis}</p>
                 <button className="btn btn-outline-danger">
                   <a
-                    href={save.URL}
+                    href={save.url}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
