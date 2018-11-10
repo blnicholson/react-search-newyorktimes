@@ -1,5 +1,6 @@
 import React from "react";
-
+import {Link} from "react-router-dom";
+ 
 
 const NavBar2 = () => (
   <nav className="navbar">
@@ -8,9 +9,11 @@ const NavBar2 = () => (
       NYT Search
     </a>
     <form className="form-inline">
+    <Link to = "/articles">
       <button className="btn btn-outline-warning">
-        <a href="/articles">Search Articles</a>
+        Search Articles
       </button>
+      </Link>
     </form>
   </nav>
 );
