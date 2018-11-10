@@ -9,12 +9,9 @@ The NYT Article Search app allows the user to search the NYT api using topic, st
 
  Search Form               |  Results
 :-------------------------:|:-------------------------:
-<img src="markdownimages/NYTReact.png" alt="alt text" width="500" >  |    <img src="markdownimages/results.png" alt="alt text" width="500">
+<img src="markdownimages/NYTReact.png" alt="alt text"  >  |    <img src="markdownimages/results.png" alt="alt text" >
 
-Saved Article List         |  Saved Article Card
-:-------------------------:|:-------------------------:
-<img src="markdownimages/saved.png" alt="alt text" width="500" >  |    <img src="markdownimages/savedCard.png" alt="alt text" width="500" height:"200">
- 
+
    
 
 ## **Link To App**
