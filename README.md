@@ -9,7 +9,7 @@ The NYT Article Search app allows the user to search the NYT api using topic, st
 
  Search Form               |  Results
 :-------------------------:|:-------------------------:
-<img src="markdownimages/NYTReact.png" alt="alt text"  >  |    <img src="markdownimages/results.png" alt="alt text" >
+<img src="markdownimages/NYTReact.png" alt="alt text">  |    <img src="markdownimages/results.png" alt="alt text">
 
 
    
