@@ -2,6 +2,7 @@ import React from "react";
 import "./SearchForm.css";
 
 
+
 //Search form for searching articles
  const SearchForm = props => (
     <div className = "container">
@@ -25,7 +26,8 @@ import "./SearchForm.css";
             <input type ="endDate" className="form-control" name="endDate" onChange={props.handleInputChange} />
             </div>
             <div className="card-footer">
-            <button type="submit" className="btn btn-outline-warning" onClick= {props.handleFormSubmit}>Submit</button>
+            <button type="submit" className="btn btn-outline-warning" onClick= {props.handleFormSubmit} >Submit
+            </button>
             </div>
         </form>
     

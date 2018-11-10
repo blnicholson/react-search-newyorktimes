@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
 import SearchForm from "../../components/SearchForm/SearchForm";
+import Navbar from "../../components/NavBar/NavBar";
 import "./Articles.css";
 
 class Articles extends Component {
@@ -35,20 +36,23 @@ class Articles extends Component {
       [name]: value
     });
   };
-
+ 
   //Submit button gets articles from NYT
   handleFormSubmit = event => {
     event.preventDefault();
     this.clearForm();
+   
     API.getArticles(this.state.topic, this.state.startDate, this.state.endDate)
-      .then(res => {
-        this.setState({ articleResult: res.data.response.docs });
+    .then(res => {
+      this.setState({ articleResult: res.data.response.docs });
         console.log(this.state.articleResult);
+         
       })
       .catch(err => console.log(err));
+      
   };
 
-  //Save article button
+  // //Save article button
   handleSaveArticle = articleData => {
     API.saveArticle({
       title: articleData.headline.main,
@@ -62,18 +66,21 @@ class Articles extends Component {
       })
       .catch(err => console.log(err));
   };
-  changeState = article => {}
+  
   render() {
     return (
       <div>
+         <Navbar/>
+         <br/>
+         <br/>
         <SearchForm
           handleFormSubmit={this.handleFormSubmit}
           handleInputChange={this.handleInputChange}
         />
         <br />
-        <h1>Results</h1>
+        <h1 id = "target">Results</h1>
        
-        <br />
+         <br />
         <div className="container-fluid">
           <div className="row">
             <div className="col-md-12">
