@@ -72,7 +72,7 @@ class Articles extends Component {
         />
         <br />
         <h1>Results</h1>
-        <h2>{this.state.saveMessage}</h2>
+       
         <br />
         <div className="container-fluid">
           <div className="row">
