@@ -9,7 +9,7 @@ import "./SearchForm.css";
     <div className = "card-title">
       <h1>Search Articles</h1>
     </div>
-        <form className = "search">
+        <form className = "search" id="searchForm">
             <div className="form-group">
             <label>Topic</label>
             <input type ="topic" className="form-control" name="topic" onChange={props.handleInputChange} />

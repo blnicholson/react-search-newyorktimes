@@ -3,15 +3,29 @@ import API from "../../utils/API";
 import SearchForm from "../../components/SearchForm/SearchForm";
 import "./Articles.css";
 
-
 class Articles extends Component {
-
   //Setting the state
   state = {
     topic: "",
     startDate: "",
     endDate: "",
-    articleResult: [], 
+    articleResult: [],
+    saveMessage:""
+  };
+
+
+  componentDidMount() {
+    this.clearForm();
+  }
+
+  //Clear Function
+  clearForm = () => {
+    document.getElementById("searchForm").reset();
+    this.setState({
+      topic: "",
+      startDate: "",
+      endDate: ""
+    });
   };
 
   //input change
@@ -25,6 +39,7 @@ class Articles extends Component {
   //Submit button gets articles from NYT
   handleFormSubmit = event => {
     event.preventDefault();
+    this.clearForm();
     API.getArticles(this.state.topic, this.state.startDate, this.state.endDate)
       .then(res => {
         this.setState({ articleResult: res.data.response.docs });
@@ -32,30 +47,34 @@ class Articles extends Component {
       })
       .catch(err => console.log(err));
   };
-  
+
   //Save article button
   handleSaveArticle = articleData => {
-      API.saveArticle({
-        title:articleData.headline.main,
-        url:articleData.web_url,
-        synopsis:articleData.snippet
+    API.saveArticle({
+      title: articleData.headline.main,
+      url: articleData.web_url,
+      synopsis: articleData.snippet,
+      
+    })
+      .then(res => {
+        this.setState({saveMessage: articleData.headline.main + " has been saved"})
+        alert(this.state.saveMessage)
       })
-      .then(alert("Article has been saved"))
       .catch(err => console.log(err));
-    
   };
-  
+  changeState = article => {}
   render() {
     return (
-      <div className="background">
+      <div>
         <SearchForm
           handleFormSubmit={this.handleFormSubmit}
           handleInputChange={this.handleInputChange}
         />
         <br />
         <h1>Results</h1>
-        <br></br>
-        <div className="container">
+        <h2>{this.state.saveMessage}</h2>
+        <br />
+        <div className="container-fluid">
           <div className="row">
             <div className="col-md-12">
               {this.state.articleResult.map((article, i) => (
@@ -78,19 +97,17 @@ class Articles extends Component {
                     <button
                       id="Button"
                       className="btn btn-outline-warning"
-                      onClick={()=>this.handleSaveArticle(article)}
+                      onClick={() => this.handleSaveArticle(article)}
                     >
                       Save
                     </button>
+               
                   </div>
                 </div>
               ))}
             </div>
           </div>
         </div>
-        
-       
-        
       </div>
     );
   }

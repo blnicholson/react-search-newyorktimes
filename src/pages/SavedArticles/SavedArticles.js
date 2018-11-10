@@ -38,13 +38,13 @@ class SavedArticles extends Component {
 
   render() {
     return (
-      <div className="container">
+      <div className="container-fluid">
       <div className="row">
-        <div className="col-md-12">
-        <div className="result">
+        <div className="col-md-4">
           <h1 className="articlesResults">Saved Articles</h1>
         </div>
         <br/>
+        <div className="card-columns">
           {this.state.savedArticles.map((save, i) => (
             <div key={i} className="card" id="resultCard">
               <div className="card-body">
