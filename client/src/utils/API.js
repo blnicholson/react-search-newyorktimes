@@ -6,7 +6,7 @@ export default {
 
     getArticles: function(query, startYear, endYear){
         const BASEURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key="
-        const APIKEY = "75acc9f29c2e4ef09434161361272301";
+        const APIKEY = "hSVzG40FU0jl7gmq5uLV8IiFMUNlA1E5";
         return axios.get(BASEURL + APIKEY + "&q=" + query + "&begin_date=" + startYear + "0101&end_date=" + endYear + "0101");
     },
     //Gets articles with given id 
